@@ -1,0 +1,68 @@
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.exe.config
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.exe
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.pdb
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\App.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi_MarkupCompile.cache
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi_MarkupCompile.lref
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.g.resources
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.Properties.Resources.resources
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.GenerateResource.cache
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.CoreCompileInputs.cache
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.exe
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.pdb
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignColors.dll
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignColors.pdb
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.CopyComplete
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongHan\HienthiSLXuongHan.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongHan\HienthiSLXuongHan.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongKiemDinh\HienthiSLXuongKiemDinh.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongKiemDinh\HienthiSLXuongKiemDinh.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Chassis.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Final.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Trim.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Chassis.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Final.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Trim.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongTrim.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongTrim.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongFinal.g.cs
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongFinal.baml
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\HAO IT\source\repos\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csprojAssemblyReference.cache
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.exe.config
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.exe
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\ManHinhHienThi.pdb
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignColors.dll
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignColors.pdb
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongFinal.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongTrim.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongHan\HienthiSLXuongHan.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongKiemDinh\HienthiSLXuongKiemDinh.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Chassis.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Final.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Trim.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\App.g.cs
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi_MarkupCompile.cache
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi_MarkupCompile.lref
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongFinal.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\SanLuongTrim.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongHan\HienthiSLXuongHan.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongKiemDinh\HienthiSLXuongKiemDinh.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Chassis.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Final.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\XuongLapRap\Trim.baml
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.g.resources
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.Properties.Resources.resources
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.GenerateResource.cache
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.CoreCompileInputs.cache
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csproj.CopyComplete
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.exe
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.pdb
+D:\Hao\ManHinhLed\ManHinhHienThi\ManHinhHienThi\ManHinhHienThi\obj\Debug\ManHinhHienThi.csprojAssemblyReference.cache

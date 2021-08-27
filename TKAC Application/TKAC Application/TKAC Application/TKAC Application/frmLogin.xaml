@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="TKAC_Application.frmLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Design="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:TKAC_Application"
+             mc:Ignorable="d" 
+             d:DesignHeight="766" d:DesignWidth="1360">
+    <Grid>
+        <Grid Height="500" Width="1200" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFAFAFA">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="kia-logo.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#FFC00000"/>
+            <Grid Grid.Row="2" Grid.Column="2" Background="AliceBlue"/>
+            <Image Source="BG.jpg" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="ĐĂNG NHẬP" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="30" FontFamily="Tahoma" Margin="20,0,0,0"/>
+                <Design:PackIcon Kind="KeyboardArrowRight" Margin="180,30,0,0"/>
+                <Design:PackIcon Kind="KeyboardArrowRight" Margin="185,30,0,0"/>
+                <Design:PackIcon Kind="KeyboardArrowRight" Margin="190,30,0,0"/>
+                <Border Grid.Row="1" Margin="20,5,20,0" CornerRadius="5,5,0,0" BorderThickness="1" BorderBrush="Gray" Background="White">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Design:PackIcon Kind="User" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30"/>
+                        <TextBox x:Name="txtUsername" Grid.Column="1" FontFamily="Tahoma" FontSize="17" VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="2" Margin="20,0,20,5" CornerRadius="0,0,5,5" BorderThickness="1" BorderBrush="Gray" Background="White">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Design:PackIcon Kind="Key" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30"/>
+                        <PasswordBox x:Name="txtPassword" KeyUp="txtPassword_KeyUp" Grid.Column="1" FontFamily="Tahoma" FontSize="17" VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" Background="Transparent"/>
+                    </Grid>
+                </Border>
+                <CheckBox x:Name="chkRemember" Grid.Row="3" Content="Ghi nhớ thông tin" FontFamily="Tahoma" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" FontStyle="Italic"/>
+                <Border Grid.Row="4" Margin="20,5,20,5" CornerRadius="5" BorderThickness="1" BorderBrush="#FFC00000" Background="#FFC00000">
+                    <Button x:Name="btnLogin" Click="btnLogin_Click" Background="Transparent" BorderThickness="0" Content="Đăng nhập" Foreground="White" FontFamily="Tahoma" FontSize="14" Cursor="Hand">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Border>
+                <Grid Background="Gray" Height="1" Grid.Row="5" VerticalAlignment="Top" Margin="0,5,0,0"/>
+
+                <Border Grid.Row="5" Margin="20,15" CornerRadius="5" BorderThickness="1" BorderBrush="#FFC00000" Background="White">
+                    <Button Background="Transparent" BorderThickness="0" Content="Đăng ký người dùng mới" Foreground="#FFC00000" FontFamily="Tahoma" FontSize="14" Cursor="Hand">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Border>
+            </Grid>
+            <Border Height="7" Width="3" Background="#FFC00000" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,13,0,0"/>
+            <TextBlock Margin="25,4,0,0" Text="Thông tin liên hệ:" Foreground="#FFC00000" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="32,25,0,0" Text="Nhân sự hỗ trợ: " Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="150,25,0,0" Text="Bùi Ngọc Phú" Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="32,45,0,0" Text="Số điện thoại: " Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="150,45,0,0" Text="0938 907 728" Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="32,65,0,0" Text="Email: " Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Margin="150,65,0,0" Text="buingocphu@thaco.com.vn" Foreground="Gray" Grid.Row="3" FontFamily="Tahoma" FontSize="14"/>
+            <TextBlock Text="Copyright(c)2021 by Infomation Technology Administrator Dept" Foreground="Gray" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Tahoma" FontSize="14" Margin="5"/>
+            <TextBlock Text="Version: v1.09032021" Foreground="Gray" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Tahoma" FontSize="14" Margin="5"/>
+        </Grid>
+    </Grid>
+</UserControl>

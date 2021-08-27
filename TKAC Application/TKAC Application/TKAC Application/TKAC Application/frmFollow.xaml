@@ -1,0 +1,374 @@
+﻿<UserControl x:Class="TKAC_Application.frmFollow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TKAC_Application"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="768" d:DesignWidth="1360" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition MinHeight="50" MaxHeight="400" Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="THEO DÕI SẢN XUẤT" Foreground="#FFC00000" FontSize="14" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Border CornerRadius="5" Height="30" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" BorderBrush="#FFC00000" Margin="10,0,0,0">
+            <Grid Width="200" Background="#FFC00000">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Bộ phận: " Background="#FFC00000" Foreground="White" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Border CornerRadius="5" Width="130" Height="30" Background="White" BorderThickness="1" BorderBrush="#FFC00000" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-2,0,0,0">
+                    <TextBlock x:Name="lblDept" Text="Bộ phận: " Foreground="#FFC00000" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Border>
+
+        
+        <ComboBox Grid.Column="0"  x:Name="cbbStation" SelectionChanged="cbbStation_SelectionChanged"
+      Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+      materialDesign:TextFieldAssist.SuffixText=""
+      materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+      materialDesign:ColorZoneAssist.Mode="Inverted"
+      materialDesign:HintAssist.Hint="Chọn chuyền"
+      materialDesign:HintAssist.HelperText="" Height="40" Width="170" FontWeight="Bold"   />
+        <Border Grid.Column="1" CornerRadius="5" Height="30" Width="140" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#FFC00000" BorderThickness="1" BorderBrush="#FFC00000" Margin="10,0,10,0">
+            <Button x:Name="btnExport" Click="btnExport_Click" Content="Xuất báo cáo ngày" Foreground="White" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" FontFamily="Tahoma" FontSize="14">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Border>
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="1" FontWeight="Bold" Margin="10,0,0,0" Text="Sản lượng ngày"></TextBlock>
+        <lvc:PieChart Grid.Column="0" Grid.Row="1" x:Name="ChtSanLuongNgay" FontFamily="Tahoma" FontSize="12" StartingRotationAngle="0" Margin="10" Width="190" Height="190" InnerRadius="30"  BorderBrush="Black" BorderThickness="0,0,1,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" FontWeight="Bold" Text="Sản lượng tháng" Margin="220,0,0,0"></TextBlock>
+        <lvc:PieChart Grid.Column="0" Grid.Row="1" x:Name="ChtSanLuongThang" FontFamily="Tahoma" FontSize="12" StartingRotationAngle="0" Margin="220,10,10,10" Width="190" Height="190" InnerRadius="30"  BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+       
+            
+            <Border Margin="440,0,10,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Gray" CornerRadius="5" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="LŨY KẾ SẢN XUẤT" FontSize="30" FontFamily="Tahoma" Grid.ColumnSpan="4" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFC00000" Margin="0,10,0,0"/>
+                <Border Grid.Column="0" BorderThickness="0,1,1,0" BorderBrush="Gray" Margin="0,60,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Sản lượng ngày" Grid.Row="1" FontFamily="Tahoma" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="lblActualDay" Foreground="Red" Text="100" Grid.Row="0" FontFamily="Tahoma" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" BorderThickness="0,1,1,0" BorderBrush="Gray" Margin="0,60,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Kế hoạch ngày" Grid.Row="1" FontFamily="Tahoma" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="lblPlanDay" KeyUp="lblPlanDay_KeyUp" Foreground="Green" Background="Transparent" BorderThickness="0,0,0,1" Text="100" Grid.Row="0" FontFamily="Tahoma" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="2" BorderThickness="0,1,1,0" BorderBrush="Gray" Margin="0,60,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Sản lượng tháng" Grid.Row="1" FontFamily="Tahoma" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="lblActualMonth" Text="1000" Grid.Row="0" Foreground="Red" FontFamily="Tahoma" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                    </Grid>
+                </Border>
+                <Border Grid.Column="3" BorderThickness="0,1,0,0" BorderBrush="Gray" Margin="0,60,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Kế hoạch tháng" Grid.Row="1" FontFamily="Tahoma" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="lblPlanMonth" KeyUp="lblPlanMonth_KeyUp" Background="Transparent" BorderThickness="0,0,0,1" Text="1000" Grid.Row="0" Foreground="Green" FontFamily="Tahoma" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        
+            <TextBlock  Text="CHI TIẾT THỰC HIỆN TRONG NGÀY"  Grid.Row="2" FontSize="14" FontFamily="Tahoma" Margin="10,5"/>
+            <ListView x:Name="lstThuHienNgay" FontFamily="Tahoma"  Grid.Row="2" FontSize="14" Margin="10,30,10,40" BorderThickness="1" Cursor="Hand" BorderBrush="Gray" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="BorderBrush" Value="Gray"></Setter>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"></Setter>
+                    <Setter Property="Height" Value="35"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding tt}" Value="OFF">
+                            <Setter Property="Background" Value="Green" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding tt}" Value="DONEOFF">
+                            <Setter Property="Background" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.Resources>
+                <Style x:Key="HeaderHeight" TargetType="GridViewColumnHeader">
+                    <Setter Property="Height" Value="35"/>
+                    <Setter Property="BorderBrush" Value="#FFC00000"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Background" Value="#FFC00000"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+                <local:OrdinalConverter x:Key="OrdinalConverter" />
+
+                <DataTemplate x:Key="OrdinalColumnDataTemplate">
+                    <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListViewItem},
+                    Converter={StaticResource ResourceKey=OrdinalConverter}}" HorizontalAlignment="Right" />
+                </DataTemplate>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView ColumnHeaderContainerStyle="{StaticResource ResourceKey=HeaderHeight}">
+                    <GridViewColumn Header="TT"  Width="35" CellTemplate="{StaticResource ResourceKey=OrdinalColumnDataTemplate}"/>
+                    <GridViewColumn Header="Loại xe" Width="270" DisplayMemberBinding="{Binding model}"/>
+
+                    <GridViewColumn Header="Số khung" Width="160">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="160" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding vincode}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Thời gian vào" Width="160" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="160" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding timestamp}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Border Grid.Row="2" VerticalAlignment="Bottom" BorderThickness="0,0,0,1" BorderBrush="Gray">
+        <DockPanel >
+            <TextBlock FontSize="15" Text="Chọn ngày: Từ " HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+            <TextBox x:Name="LBLNgayNhap" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" BorderThickness="1" FontSize="13" BorderBrush="White" Text="00/00/0000"></TextBox>
+            <DatePicker HorizontalAlignment="Left" Width="20" Height="25" Margin="0 10 5 10" BorderThickness="0" Name="datapicker1" SelectedDateChanged="datapicker1_SelectedDateChanged"/>
+            <TextBlock FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Text="đến "></TextBlock>
+            <TextBox x:Name="LBLNgayDen" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" BorderThickness="1" BorderBrush="White" FontSize="13" Text="00/00/0000"></TextBox>
+            <DatePicker  HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="25" Margin="0 10 5 10" BorderThickness="0" Name="datapicker2" SelectedDateChanged="datapicker2_SelectedDateChanged"/>
+            <Button x:Name="btnTim" Click="btnTim_Click" Width="60" Margin="30,0,0,0" Height="30" Content="Tìm" BorderThickness="0" Background="Green"></Button>
+            <Button x:Name="btnXuatExcel" Click="btnXuatExcel_Click" Width="100" Height="30" Content="Xuất Excel" BorderThickness="0" Background="Green"></Button>
+            </DockPanel>
+        </Border>
+
+        <TextBlock Text="TỔNG HỢP THỰC HIỆN TRONG NGÀY" Grid.Column="0" Grid.Row="3" FontSize="14" FontFamily="Tahoma" Margin="10,5"/>
+        <ListView x:Name="lstTongHop" FontFamily="Tahoma" FontSize="14" Grid.Row="3" Margin="10,30,10,10" BorderThickness="1" Cursor="Hand" BorderBrush="Gray" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="BorderBrush" Value="Gray"></Setter>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"></Setter>
+                    <Setter Property="Height" Value="35"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding tt}" Value="OFF">
+                            <Setter Property="Background" Value="Green" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding tt}" Value="DONEOFF">
+                            <Setter Property="Background" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.Resources>
+                <Style x:Key="HeaderHeight" TargetType="GridViewColumnHeader">
+                    <Setter Property="Height" Value="35"/>
+                    <Setter Property="BorderBrush" Value="#FFC00000"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Background" Value="#FFC00000"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+                <local:OrdinalConverter x:Key="OrdinalConverter" />
+
+                <DataTemplate x:Key="OrdinalColumnDataTemplate">
+                    <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListViewItem},
+                    Converter={StaticResource ResourceKey=OrdinalConverter}}" HorizontalAlignment="Right" />
+                </DataTemplate>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView ColumnHeaderContainerStyle="{StaticResource ResourceKey=HeaderHeight}">
+                    <GridViewColumn Header="TT"  Width="30" CellTemplate="{StaticResource ResourceKey=OrdinalColumnDataTemplate}"/>
+                    <GridViewColumn Header="Loại xe" Width="400" DisplayMemberBinding="{Binding model}"/>
+                    <GridViewColumn Header="Số lượng" Width="200" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="160" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding count}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <Border x:Name="chartLapRap" Grid.Column="1" Grid.Row="2" Margin="10" BorderThickness="1" BorderBrush="Gray" Visibility="Hidden">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,1,0">
+                    <TextBlock Margin="5" Text="Sản lượng ngày Trạm TRIM" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                </Border>
+                <lvc:PieChart x:Name="ChtSanLuongNgayTrim" FontFamily="Tahoma" FontSize="12" StartingRotationAngle="0" Width="200" Height="150" InnerRadius="30"  BorderBrush="Black" BorderThickness="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,1,0">
+                    <TextBlock Margin="5" Text="Sản lượng ngày Trạm CHASSIS" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                </Border>
+                <lvc:PieChart Grid.Column="1" Grid.Row="0" x:Name="ChtSanLuongNgayChassis" FontFamily="Tahoma" FontSize="12" StartingRotationAngle="0" Width="200" Height="150" InnerRadius="30"  BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <Border Grid.Column="2" Grid.Row="0">
+                    <TextBlock Margin="5" Text="Sản lượng ngày Trạm FINAL" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                </Border>
+                <lvc:PieChart Grid.Column="2" Grid.Row="0"  x:Name="ChtSanLuongNgayFinal" FontFamily="Tahoma" FontSize="12" StartingRotationAngle="0" Width="200" Height="150" InnerRadius="30"  BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+
+        </Border>
+        
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" Visibility="Hidden" Name="pieTongHop" LegendLocation="Bottom" Grid.Column="1" Grid.Row="2" FontFamily="Tahoma" FontSize="14" Margin="10" BorderThickness="1" BorderBrush="Gray">
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Labels="{Binding Labels}" />
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis LabelFormatter="{Binding Formatter}" />
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.DataTooltip>
+                <lvc:DefaultTooltip SelectionMode="SharedYValues"></lvc:DefaultTooltip>
+            </lvc:CartesianChart.DataTooltip>
+        </lvc:CartesianChart>
+
+        <Expander  IsExpanded="False" Background="Transparent" FontWeight="Bold" Grid.Column="1" Grid.Row="3" MinHeight="10" MaxHeight="300" Margin="10,-10,10,0">
+            <Expander.Header>
+                <BulletDecorator>
+                    <BulletDecorator.Bullet>
+                         <Image Width="30" Height="30" Source="/Hinh/ustawienia.png" />
+                    </BulletDecorator.Bullet>
+                    <TextBlock FontSize="16" TextDecorations="Underline" FontStyle="Italic" Margin="10,0,0,0" Text="Cài đặt" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                </BulletDecorator>
+            </Expander.Header>
+            <Border BorderThickness="1" BorderBrush="Gray" Padding="5,5,0,0" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="30"/>-->
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--<TextBlock Text="Cài đặt" FontSize="14" FontFamily="Tahoma" FontWeight="Bold" Margin="10,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
+                
+                <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="rb1Ca" FontWeight="Normal" Checked="rb1Ca_Checked" Content="Làm việc 1 ca" FontSize="14" FontFamily="Tahoma" Margin="10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" VerticalContentAlignment="Center"/>
+                <StackPanel x:Name="stp1Ca" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                            <RadioButton FontWeight="Normal" x:Name="rboff" Checked="rboff_Checked" Content="Không TC" FontSize="14" FontFamily="Tahoma" Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <RadioButton FontWeight="Normal" x:Name="rb1830" Checked="rb1830_Checked" Content="TC 18:30" FontSize="14" FontFamily="Tahoma" Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <RadioButton FontWeight="Normal" x:Name="rb2045" Checked="rb2045_Checked" Content="TC 20:45" FontSize="14" FontFamily="Tahoma" Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <RadioButton FontWeight="Normal" x:Name="rb2215" Checked="rb2215_Checked" Content="TC 22:15" FontSize="14" FontFamily="Tahoma" Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <RadioButton FontWeight="Normal" x:Name="rb2400" Checked="rb2400_Checked" Content="TC 24:00" FontSize="14" FontFamily="Tahoma" Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                        <RadioButton FontWeight="Normal" x:Name="rb2Ca" Checked="rb2Ca_Checked" Content="Làm việc 2 ca" FontSize="14" FontFamily="Tahoma" Margin="10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" VerticalContentAlignment="Center"/>
+                <Grid x:Name="gr2Ca" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                            <RadioButton FontWeight="Normal" x:Name="chkCa1" Content="Ca 1" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                            <RadioButton FontWeight="Normal" x:Name="chkCa2" Content="Ca 2" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                            <TextBlock FontWeight="Normal" Text="Thời gian vào: " Grid.Row="1" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <ComboBox FontWeight="Normal" Name="cbbInCa1" SelectionChanged="cbbInCa1_SelectionChanged" Grid.Row="1" Grid.Column="1" FontSize="14" FontFamily="Tahoma" VerticalContentAlignment="Center" Margin="10,5"/>
+                            <TextBlock FontWeight="Normal" Text="Thời gian ra: " Grid.Row="2" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <ComboBox FontWeight="Normal" Name="cbbOutCa1" SelectionChanged="cbbOutCa1_SelectionChanged" Grid.Row="2" Grid.Column="1" FontSize="14" FontFamily="Tahoma" VerticalContentAlignment="Center" Margin="10,5"/>
+                            <TextBlock FontWeight="Normal" Text="Thời gian vào: " Grid.Row="1" Grid.Column="2" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <ComboBox FontWeight="Normal" Name="cbbInCa2" SelectionChanged="cbbInCa2_SelectionChanged" Grid.Row="1" Grid.Column="3" FontSize="14" FontFamily="Tahoma" VerticalContentAlignment="Center" Margin="10,5"/>
+                            <TextBlock FontWeight="Normal" Text="Thời gian ra: " Grid.Row="2" Grid.Column="2" FontSize="14" FontFamily="Tahoma" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <ComboBox FontWeight="Normal" Name="cbbOutCa2" SelectionChanged="cbbOutCa2_SelectionChanged" Grid.Row="2" Grid.Column="3" FontSize="14" FontFamily="Tahoma" VerticalContentAlignment="Center" Margin="10,5"/>
+                </Grid>
+                </Grid>
+                </Grid>
+            
+        </Border>
+        </Expander>
+        <Border Grid.Column="1" CornerRadius="5" Height="30" Width="140" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#FFC00000" BorderThickness="1" BorderBrush="#FFC00000" Margin="10,0,155,0">
+            <Button x:Name="btnRef" Click="btnRef_Click"  Content="Làm mới dữ liệu" Foreground="White" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" FontFamily="Tahoma" FontSize="14">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Border>
+    </Grid>
+</UserControl>

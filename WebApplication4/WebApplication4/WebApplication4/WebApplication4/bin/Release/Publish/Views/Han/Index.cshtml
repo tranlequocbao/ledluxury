@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    function reFresh() {
+        window.open(location.reload(true));
+    }
+    window.setInterval("reFresh()", 10000);
+</script>
+
+<script language="JavaScript">
+    function requestFullScreen(element) {
+        // Supports most browsers and their versions.
+        var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+        if (requestMethod) { // Native full screen.
+            requestMethod.call(element);
+        } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+            var wscript = new ActiveXObject("WScript.Shell");
+            if (wscript !== null) {
+                wscript.SendKeys("{F11}");
+            }
+        }
+    }
+
+    var elem = document.body; // Make the body go full screen.
+    requestFullScreen(elem);
+</script>
+
+@*<script type="text/javascript">
+        (function () {
+            setTimeout(function () {
+                window.location = "http://10.40.12.6:8080/QC/login/";
+            }, 20000); /* 1000 = 1 second*/
+        })();
+    </script>*@
+
+<div class="top">
+    <span class="tieude">THÔNG TIN SẢN XUẤT THACO KIA</span>
+    <span class="xuong" style="font-size:50px"> XƯỞNG HÀN </span>
+    <span class="thoigian">
+        <span id="ngay"></span><span>/</span><span id="thang"></span><span>/</span><span id="nam"></span>
+        <span id="gio"></span><span>:</span><span id="phut"></span><span>:</span><span id="giay"></span><span></span>
+    </span>
+</div>
+
+
+<div class="content">
+	<table>
+		<thead>
+			<tr>
+				<th style="width:50%">LOẠI XE</th>
+				<th style="width:50%;text-align:center">SỐ LƯỢNG</th>
+			</tr>
+		</thead>
+	</table>
+
+
+	<div style="overflow: hidden; height:425PX;">
+		@if ((ViewBag.vv).Count > 4)
+		{
+			<marquee direction="up" scrollamount="5" style="height:417px">
+				<table>
+					<tbody>
+						@foreach (var item in ViewBag.vv)
+						{
+							<tr>
+								<td style="width:50%; height:100px ;font-size:50PX">@item.CarName</td>
+								<td style="        text-align: center;        font-size: 50PX;        width: 50%">@item.SoLuong</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</marquee>
+		}
+
+		@if ((ViewBag.vv).Count == 1)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:410px; font-size:100px">@item.CarName</td>
+							<td style=" text-align: center; width: 50%; height: 100%; font-size: 100px">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 2)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:203px; font-size:90PX">@item.CarName</td>
+							<td style=" text-align: center; width: 50%; height: 100%; font-size: 90px">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 3)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:133.5PX; font-size:80PX">@item.CarName</td>
+							<td style=" text-align: center; width: 50%; height: 115PX; font-size: 80PX">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 4)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:99px; font-size:70PX">@item.CarName</td>
+							<td style=" text-align: center; width: 50%; height: 85PX; font-size: 70PX">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+	</div>
+</div>
+
+<div class="wrapper">
+    <div class="item item1"></div>
+    <div class="item item2">
+        <p style="margin:20px">NGÀY</p>
+    </div>
+    <div class="item item3">
+        <p style="margin:20px">THÁNG</p>
+    </div>
+    <div class="item item4">
+        <p style="margin:20px">THỰC HIỆN</p>
+    </div>
+    <div class="item item5">@ViewBag.thnn</div>
+    <div class="item item6">@ViewBag.thtt</div>
+    <div class="item item7">
+        <p style="margin:20px">KẾ HOẠCH</p>
+    </div>
+    <div class="item item8">@ViewBag.khnn</div>
+    <div class="item item9">@ViewBag.khtt</div>
+
+
+</div>
+

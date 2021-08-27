@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="THACOKIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Barcode">
+    <Key>
+      <PropertyRef Name="Model" />
+    </Key>
+    <Property Name="Model" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OptionCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Vehicle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ACUCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CLUCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CarName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="THACOKIAEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Barcodes" EntityType="Self.Barcode" />
+    <EntitySet Name="PLANs" EntityType="THACOKIAModel.PLAN" />
+    <EntitySet Name="ScanCounts" EntityType="THACOKIAModel.ScanCount" />
+    <EntitySet Name="QTSXes" EntityType="THACOKIAModel.QTSX" />
+  </EntityContainer>
+  <EntityType Name="PLAN">
+    <Key>
+      <PropertyRef Name="ID_Plan" />
+    </Key>
+    <Property Name="ID_Plan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Station" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DayPlan" Type="Int32" />
+    <Property Name="MonthPlan" Type="Int32" />
+    <Property Name="SHIFT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ScanCount">
+    <Key>
+      <PropertyRef Name="ID_ScanCount" />
+    </Key>
+    <Property Name="ID_ScanCount" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VinCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Station" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="QTSX">
+    <Key>
+      <PropertyRef Name="Vin_Code" />
+    </Key>
+    <Property Name="Vin_Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LotNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tranmission" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BodyPrinted" Type="Boolean" />
+    <Property Name="DayBodyPrinted" Type="DateTime" Precision="3" />
+    <Property Name="AssemblyPrinted" Type="Boolean" />
+    <Property Name="DayAssemblyPrinted" Type="DateTime" Precision="3" />
+    <Property Name="PinCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataImport" Type="DateTime" Precision="3" />
+    <Property Name="Color" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NoEngine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LotEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeSub" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

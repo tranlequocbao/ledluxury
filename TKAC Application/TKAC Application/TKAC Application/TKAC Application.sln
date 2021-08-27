@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKAC Application", "TKAC Application\TKAC Application.csproj", "{52B15458-7CF2-43E3-9A25-3311F30E3EFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52B15458-7CF2-43E3-9A25-3311F30E3EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B15458-7CF2-43E3-9A25-3311F30E3EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B15458-7CF2-43E3-9A25-3311F30E3EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B15458-7CF2-43E3-9A25-3311F30E3EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2929ADF-9FBB-4449-9E7A-BCA24B77535B}
+	EndGlobalSection
+EndGlobal

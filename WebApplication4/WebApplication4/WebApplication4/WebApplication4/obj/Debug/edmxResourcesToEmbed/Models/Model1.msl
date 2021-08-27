@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="THACOKIAModelStoreContainer" CdmEntityContainer="THACOKIAEntities">
+    <EntitySetMapping Name="Barcodes">
+      <EntityTypeMapping TypeName="THACOKIAModel.Barcode">
+        <MappingFragment StoreEntitySet="Barcode">
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="OptionCode" ColumnName="OptionCode" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+          <ScalarProperty Name="ACUCode" ColumnName="ACUCode" />
+          <ScalarProperty Name="CLUCode" ColumnName="CLUCode" />
+          <ScalarProperty Name="ModelCode" ColumnName="ModelCode" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

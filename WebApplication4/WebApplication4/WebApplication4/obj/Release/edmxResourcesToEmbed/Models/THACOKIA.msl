@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="THACOKIAModelStoreContainer" CdmEntityContainer="THACOKIAEntities1">
+    <EntitySetMapping Name="Barcodes">
+      <EntityTypeMapping TypeName="THACOKIAModel.Barcode">
+        <MappingFragment StoreEntitySet="Barcode">
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="OptionCode" ColumnName="OptionCode" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+          <ScalarProperty Name="ACUCode" ColumnName="ACUCode" />
+          <ScalarProperty Name="CLUCode" ColumnName="CLUCode" />
+          <ScalarProperty Name="ModelCode" ColumnName="ModelCode" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLANs">
+      <EntityTypeMapping TypeName="THACOKIAModel.PLAN">
+        <MappingFragment StoreEntitySet="PLAN">
+          <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+          <ScalarProperty Name="MonthPlan" ColumnName="MonthPlan" />
+          <ScalarProperty Name="DayPlan" ColumnName="DayPlan" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="ID_Plan" ColumnName="ID_Plan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScanCounts">
+      <EntityTypeMapping TypeName="THACOKIAModel.ScanCount">
+        <MappingFragment StoreEntitySet="ScanCount">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="VinCode" ColumnName="VinCode" />
+          <ScalarProperty Name="ID_ScanCount" ColumnName="ID_ScanCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QTSXes">
+      <EntityTypeMapping TypeName="THACOKIAModel.QTSX">
+        <MappingFragment StoreEntitySet="QTSX">
+          <ScalarProperty Name="TimeSub" ColumnName="TimeSub" />
+          <ScalarProperty Name="Kien" ColumnName="Kien" />
+          <ScalarProperty Name="LotEn" ColumnName="LotEn" />
+          <ScalarProperty Name="NoEngine" ColumnName="NoEngine" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="DataImport" ColumnName="DataImport" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="DayAssemblyPrinted" ColumnName="DayAssemblyPrinted" />
+          <ScalarProperty Name="AssemblyPrinted" ColumnName="AssemblyPrinted" />
+          <ScalarProperty Name="DayBodyPrinted" ColumnName="DayBodyPrinted" />
+          <ScalarProperty Name="BodyPrinted" ColumnName="BodyPrinted" />
+          <ScalarProperty Name="Tranmission" ColumnName="Tranmission" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Vin_Code" ColumnName="Vin_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

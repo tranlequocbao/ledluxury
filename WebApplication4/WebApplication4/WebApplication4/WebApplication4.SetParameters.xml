@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/WebApplication4_deploy" />
+  <setParameter name="THACOKIAEntities-Web.config Connection String" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.20.12.6;initial catalog=THACOKIA;user id=sa;password=123456;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <setParameter name="THACOKIAEntities1-Web.config Connection String" value="metadata=res://*/Models.THACOKIA.csdl|res://*/Models.THACOKIA.ssdl|res://*/Models.THACOKIA.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.20.12.6;initial catalog=THACOKIA;user id=sa;password=123456;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <setParameter name="THACOKIAConnectionString-Web.config Connection String" value="Data Source=10.20.12.6;Initial Catalog=THACOKIA;User ID=sa;Password=123456;MultipleActiveResultSets=True;Application Name=EntityFramework" />
+</parameters>

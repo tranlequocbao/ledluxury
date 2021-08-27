@@ -1,0 +1,161 @@
+﻿<Window x:Class="ManHinhHienThi.XuongHan.HienthiSLXuongHan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Design="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ManHinhHienThi.XuongHan"
+        mc:Ignorable="d"
+        Title="Hiển thị sản lượng xưởng Hàn" Height="1210" Width="1800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid Background="Black">
+                                    <!--Tạo ô-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" ></RowDefinition>
+            <RowDefinition Height="40" ></RowDefinition>
+            <RowDefinition Height="70" ></RowDefinition>
+            <RowDefinition Height="30" ></RowDefinition>
+            <RowDefinition Height="30" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="100" ></RowDefinition>
+            <RowDefinition Height="150" ></RowDefinition>
+            <RowDefinition Height="150" ></RowDefinition>
+            <RowDefinition Height="10" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="Black" Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="THÔNG TIN SẢN XUẤT" FontSize="30" FontWeight="Bold" Foreground="Red" Margin="5 0 0 0"></TextBlock>
+        </Grid>
+        <Grid Background="Black" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock Text="02/02/2021 12:15:45" Name="txtNgayThang" HorizontalAlignment="Right" FontSize="25" FontWeight="Bold" Foreground="Red" VerticalAlignment="Center" Margin="5"></TextBlock>
+        </Grid>
+        <Grid Background="Black" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" >
+            <TextBlock Text="XƯỞNG HÀN" FontWeight="Bold" HorizontalAlignment="Center" TextAlignment="Center" Foreground="Red" FontSize="50" Width="700"></TextBlock>
+        </Grid>
+
+
+                                <!--Tạo viền-->
+        <Grid Background="Red" Grid.Column="0" Grid.Row="0" Grid.RowSpan="9"></Grid>
+        <Grid Background="Red" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5"></Grid>
+        <Grid Background="Red" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5"></Grid>
+        <Grid Background="Red" Grid.Column="5" Grid.Row="0" Grid.RowSpan="9"></Grid>
+        
+        
+        
+        <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <ListView  x:Name="lstTongHop" BorderBrush="Transparent"  Background="Transparent" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView.Resources>
+                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Height" Value="60"/>
+                        <Setter Property="FontSize" Value="40"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Foreground" Value="Yellow"/>
+                        <Setter Property="BorderBrush" Value="Red"/>
+                    </Style>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="BorderThickness" Value="5,5,5,0"></Setter>
+                        <Setter Property="BorderBrush" Value="Red"></Setter>
+                        <Setter Property="FontSize" Value="50"></Setter>
+                        <Setter Property="FontWeight" Value="UltraBold"></Setter>
+                        <Setter Property="Foreground" Value="blue"></Setter>
+                        <Setter Property="FontFamily" Value="Verdana"></Setter>
+                    </Style>
+                </ListView.Resources>
+                
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="LOẠI XE" Width="1000" DisplayMemberBinding="{Binding loaixe}"></GridViewColumn>
+                        <GridViewColumn Header="SỐ LƯỢNG" Width="380" DisplayMemberBinding="{Binding soluong}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                
+            </ListView>
+            
+        </Grid>
+
+
+        <Grid Background="Black" Grid.Column="1" Grid.Row="6">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,0">
+                <TextBlock Text="" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="50" Foreground="Red" FontWeight="Bold" Margin="10 0 0 0"></TextBlock>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="2" Grid.Row="6">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,0">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock Text="NGÀY" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="50" Foreground="Green" FontWeight="Bold"></TextBlock>
+                    </Grid>
+
+                </DockPanel>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="3" Grid.Row="6">
+            <Border BorderBrush="Red" BorderThickness="0,5,0,0">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock  Text="THÁNG" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="50" Foreground="Green" FontWeight="Bold"></TextBlock>
+                    </Grid>
+
+                </DockPanel>
+            </Border>
+        </Grid>
+
+        <Grid Background="Black" Grid.Column="1" Grid.Row="7">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,0">
+                <TextBlock Text="THỰC HIỆN" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="50" Foreground="Red" FontWeight="Bold" Margin="10 0 0 0"></TextBlock>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="2" Grid.Row="7">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,0">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock Name="lblThucHienNgay" Text="000" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="150" Foreground="Red" FontWeight="Bold"></TextBlock>
+                    </Grid>
+
+                </DockPanel>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="3" Grid.Row="7">
+            <Border BorderBrush="Red" BorderThickness="0,5,0,0">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock Name="lblThucHienThang" Text="0000" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="150" Foreground="Red" FontWeight="Bold"></TextBlock>
+                    </Grid>
+
+                </DockPanel>
+            </Border>
+        </Grid>
+
+        <Grid Background="Black" Grid.Column="1" Grid.Row="8">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,5">
+                <TextBlock Text="KẾ HOẠCH" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="50" Foreground="Green" FontWeight="Bold" Margin="10 0 0 0"></TextBlock>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="2" Grid.Row="8">
+            <Border BorderBrush="Red" BorderThickness="0,5,5,5">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock Text="000" x:Name="lblKeHoachNgay" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="150" Foreground="Green" FontWeight="Bold"></TextBlock>
+                    </Grid>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <Grid Background="Black" Grid.Column="3" Grid.Row="8">
+            <Border BorderBrush="Red" BorderThickness="0,5,0,5">
+                <DockPanel HorizontalAlignment="Center">
+                    <Grid>
+                        <TextBlock Text="0000" x:Name="lblKeHoachThang" FontFamily="Verdana" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="160" Foreground="Green" FontWeight="Bold"></TextBlock>
+                    </Grid>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

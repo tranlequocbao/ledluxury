@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<script>
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function Dong_ho() {
+        var nam = document.getElementById("nam");
+        var thang = document.getElementById("thang");
+        var ngay = document.getElementById("ngay");
+        var gio = document.getElementById("gio");
+        var phut = document.getElementById("phut");
+        var giay = document.getElementById("giay");
+
+        var date = new Date();
+        var Nam_hien_tai = date.getFullYear();
+        var Thang_hien_tai = checkTime(date.getMonth() + 1);
+        var Ngay_hien_tai = checkTime(date.getDate());
+        var Gio_hien_tai = checkTime(date.getHours());
+        var Phut_hien_tai = checkTime(date.getMinutes());
+        var Giay_hien_tai = checkTime(date.getSeconds());
+
+        gio.innerHTML = Gio_hien_tai;
+        phut.innerHTML = Phut_hien_tai;
+        giay.innerHTML = Giay_hien_tai;
+        nam.innerHTML = Nam_hien_tai;
+        thang.innerHTML = Thang_hien_tai;
+        ngay.innerHTML = Ngay_hien_tai;
+     }
+    var Dem_gio = setInterval(Dong_ho, 1000);
+</script>
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sản lượng xưởng nhà máy Thaco Kia</title>
+    <link href="~/Style/css.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿body {
+    height: auto;
+    background-color: black;
+    font-weight: bold;
+    font-family: Arial;
+    margin:0px;
+}
+
+.top {
+    font-weight: bold;
+    height: 20%;
+    width: 100%;
+    margin: 5px;
+    color:lawngreen;
+    display:flex;
+}
+
+.tieude {
+    width: 35%;
+    float: left;
+    font-size: 15px;
+    color: lawngreen;
+}
+
+.thoigian {
+    align-self: center;
+    float: right;
+    text-align: right;
+    font-family: Tahoma;
+    font-size: 15px;
+    width: 30%;
+    color: lawngreen;
+    padding-right:10px;
+}
+
+.xuong {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top:20px;
+    width:45%;
+}
+.content {
+    height: 60%;
+    width: 474px;
+    border: 3px solid red;
+    border-bottom: none;
+}
+
+.wrapper {
+    width: 480px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    border-bottom: 1px solid red;
+    margin-bottom: 2px;
+}
+
+table, th, td {
+    border: 3px solid red;
+    color: yellow;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    column-rule-width: medium;
+    width: 100%;
+}
+.content 
+
+th {
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border: #ff0000 solid 3px;
+    font-family: Arial;
+}
+
+td {
+    /*font-size: 21px;*/
+    border: #ff0000 solid 3px;
+    font-weight: 700;
+    border-left: #ff0000 solid 3px;
+    height: 31px;
+}

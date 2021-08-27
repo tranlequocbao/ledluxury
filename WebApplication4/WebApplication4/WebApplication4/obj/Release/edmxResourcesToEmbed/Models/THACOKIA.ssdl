@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="THACOKIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Barcode">
+    <Key>
+      <PropertyRef Name="Model" />
+    </Key>
+    <Property Name="Model" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="OptionCode" Type="nvarchar(max)" />
+    <Property Name="Vehicle" Type="nvarchar(max)" />
+    <Property Name="ACUCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CLUCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModelCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PLAN">
+    <Key>
+      <PropertyRef Name="ID_Plan" />
+    </Key>
+    <Property Name="ID_Plan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Station" Type="nvarchar" MaxLength="50" />
+    <Property Name="DayPlan" Type="int" />
+    <Property Name="MonthPlan" Type="int" />
+    <Property Name="SHIFT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QTSX">
+    <Key>
+      <PropertyRef Name="Vin_Code" />
+    </Key>
+    <Property Name="Vin_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar(max)" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tranmission" Type="nvarchar" MaxLength="50" />
+    <Property Name="BodyPrinted" Type="bit" />
+    <Property Name="DayBodyPrinted" Type="datetime" />
+    <Property Name="AssemblyPrinted" Type="bit" />
+    <Property Name="DayAssemblyPrinted" Type="datetime" />
+    <Property Name="PinCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataImport" Type="datetime" />
+    <Property Name="Color" Type="nvarchar" MaxLength="20" />
+    <Property Name="NoEngine" Type="nvarchar" MaxLength="50" />
+    <Property Name="LotEn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kien" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeSub" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ScanCount">
+    <Key>
+      <PropertyRef Name="ID_ScanCount" />
+    </Key>
+    <Property Name="ID_ScanCount" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VinCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Station" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="THACOKIAModelStoreContainer">
+    <EntitySet Name="Barcode" EntityType="Self.Barcode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PLAN" EntityType="Self.PLAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QTSX" EntityType="Self.QTSX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScanCount" EntityType="Self.ScanCount" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    function reFresh() {
+        window.open(location.reload(true));
+    }
+    window.setInterval("reFresh()", 30000);
+</script>
+
+<div class="top" style="height:20%">
+    <span class="tieude">THÔNG TIN SẢN XUẤT THACO KIA</span>
+    <span class="xuong" style="font-size:15px">XƯỞNG LẮP RÁP(FINAL)</span>
+    <span class="thoigian">
+        <span id="ngay"></span><span>/</span><span id="thang"></span><span>/</span><span id="nam"></span>
+        <span id="gio">00</span><span>:</span><span id="phut"></span><span>:</span><span id="giay"></span><span></span>
+    </span>
+</div>
+
+
+<div class="content">
+    <table style="border:none">
+        <thead style="    border: none;">
+            <tr style="    border: none;">
+                <th style="width:50%;border-top: none;border-left: none;">LOẠI XE</th>
+                <th style="        width: 50%;        border-top: none;        border-right: none;">SỐ LƯỢNG</th>
+            </tr>
+        </thead>
+    </table>
+
+
+	<div style="overflow: hidden;">
+		@if ((ViewBag.vv).Count > 4)
+		{
+			<marquee direction="up" scrollamount="4" style="height:112px">
+                <table style="    border: none;">
+                    <tbody>
+                        @foreach (var item in ViewBag.vv)
+                        {
+                            <tr>
+                                <td style="        width: 50%;        border-left: none;        font-size: 20PX">@item.CarName</td>
+                                <td style="        text-align: center;
+        border-right: none;
+        color: lawngreen;
+        font-size: 20PX;
+        width: 50%">@item.SoLuong</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+			</marquee>
+		}
+
+		@if ((ViewBag.vv).Count == 1)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; font-size:100px">@item.CarName</td>
+							<td style="        text-align: center;
+        color: red;
+        width: 50%;
+        height: 100%;
+        font-size: 100px">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 2)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:203px; font-size:90PX">@item.CarName</td>
+							<td style="        text-align: center;
+        width: 50%;
+        color: red;
+        height: 100%;
+        font-size: 90px">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 3)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:133.5PX; font-size:80PX">@item.CarName</td>
+							<td style="        text-align: center;
+        width: 50%;
+        color: red;
+        height: 115PX;
+        font-size: 80PX">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+		@if ((ViewBag.vv).Count == 4)
+		{
+			<table>
+				<tbody>
+					@foreach (var item in ViewBag.vv)
+					{
+						<tr>
+							<td style="width:50%; height:17px; font-size:18PX">@item.CarName</td>
+							<td style="        text-align: center;
+        width: 50%;
+        color: red;
+        height: 17px;
+        font-size: 18PX">@item.SoLuong</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+
+	</div>
+</div>
+
+<div class="wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:20%"></th>
+                <th style="width:40%; color:red">NGÀY</th>
+                <th style="        width: 40%;
+        color: lawngreen
+">THÁNG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="        color: red">THỰC HIỆN</td>
+                <td style="        color: red;        font-size: 35px;">@ViewBag.thnn</td>
+                <td style="        color: red;        font-size: 35px;">@ViewBag.thtt</td>
+            </tr>
+            <tr>
+                <td style="        color: lawngreen">KẾ HOẠCH</td>
+                <td style="        color: lawngreen;        font-size: 35px;">@ViewBag.khnn</td>
+                <td style="        color: lawngreen;        font-size: 35px;">@ViewBag.khtt</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
